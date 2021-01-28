@@ -1,0 +1,66 @@
+@import '../../../assets/scss/colors.scss';
+
+.mat-card-wrap {
+  padding: 12px !important;
+
+  .filter-wrap {
+    padding: 0 4px;
+
+    .filter-title-wrap {
+      padding: 0 12px;
+
+      .filter-title {
+        text-align: center;
+        border-bottom: 1px solid $border-color;
+        padding: 5px 0;
+        margin: 0;
+      }
+    }
+
+    .filter-button-wrap {
+      padding: 10px 0;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: 3rem;
+      grid-row-gap: 1rem;
+
+      .button-year {
+        background-color: $button-color;
+        color: $black-color;
+        height: 28px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .button-year:focus {
+        outline: none;
+      }
+
+      .selected-button {
+        background-color: $base-color;
+      }
+    }
+
+  }
+}
+
+:host::ng-deep .mat-card-header-text {
+  margin: 0 !important;
+
+  .mat-card-title {
+    margin: 0 !important;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+  .mat-card-wrap {
+
+    .filter-wrap {
+
+      .filter-button-wrap {
+        grid-column-gap: 20rem;
+      }
+    }
+  }
+}

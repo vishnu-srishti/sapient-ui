@@ -1,0 +1,16 @@
+@import '../../../../assets/scss/colors.scss';
+
+.footer-wrap {
+  margin-top: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  color: $black-color;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 350px) {
+  .footer-wrap {
+    font-size: .8rem;
+  }
+}

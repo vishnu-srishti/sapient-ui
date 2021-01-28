@@ -1,0 +1,21 @@
+.main-wrap {
+  padding: 0 1rem;
+  display: grid;
+  margin: 0 auto;
+  grid-gap: 1rem;
+  grid-template-columns: 20% 80%;
+
+  .result-wrap {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .main-wrap {
+    grid-template-columns: auto;
+
+    .result-wrap {
+      padding-right: 0;
+    }
+  }
+}

@@ -1,11 +1,17 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
+
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
+    "target": "es5",
+    "baseUrl": "",
     "types": [
-      "jasmine"
-    ]
+      "jest", // 1
+      "node"
+    ],
+    "esModuleInterop": true, // 2
+    "emitDecoratorMetadata": true // 3
   },
   "files": [
     "src/test.ts",

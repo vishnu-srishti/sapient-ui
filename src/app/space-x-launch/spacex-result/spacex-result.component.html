@@ -1,0 +1,26 @@
+  <div class="grid-container">
+  <ng-container *ngFor="let item of resultData">
+    <mat-card class="mat-card">
+      <mat-card-content>
+        <div class="result-wrap">
+          <div class="image-wrap">
+            <img [src]="item.links.mission_patch_small" />
+          </div>
+          <h3 class="result-title">{{ item.mission_name }}</h3>
+          <ng-container>
+            <p class="result-mission">Mission Ids: </p>
+            <ul class="mission-ul">
+              <ng-container *ngFor="let mission of item.mission_id">
+                <li>{{ mission }}</li>
+              </ng-container>
+            </ul>
+          </ng-container>
+          <p class="result-description">Launch Year: <span>{{ item.launch_year }}</span></p>
+          <p class="result-description">Successful Launch: <span>{{ item.launch_success }}</span></p>
+          <p class="result-description">Successful Landing:
+            <span>{{ item.rocket?.first_stage?.cores[0]?.land_success }}</span></p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>

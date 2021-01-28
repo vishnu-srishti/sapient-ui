@@ -1,0 +1,52 @@
+<mat-card class="mat-card-wrap">
+  <mat-card-header>
+    <mat-card-title class="mat-card-title">Filters</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="filter-wrap">
+      <ng-container>
+        <div class="filter-title-wrap">
+          <p class="filter-title">Launch year</p>
+        </div>
+        <div class="filter-button-wrap">
+          <ng-container *ngFor="let year of launchYear; let idx = index">
+            <button class="button-year"
+              [ngClass]="{ 'selected-button': selectedFilters?.launchYear === year }"
+              (click)="selectYear(year)"> {{ year }} </button>
+          </ng-container>
+        </div>
+      </ng-container>
+
+      <ng-container>
+        <div class="filter-title-wrap">
+          <p class="filter-title">Successful Launch</p>
+        </div>
+        <div class="filter-button-wrap">
+          <ng-container>
+            <button class="button-year" [ngClass]="{ 'selected-button': selectedFilters?.launchSuccess === true }"
+              (click)="launchSuccessful(true)">True</button>
+            <button class="button-year button-m-left"
+              [ngClass]="{ 'selected-button': selectedFilters?.launchSuccess === false }"
+              (click)="launchSuccessful(false)">False</button>
+          </ng-container>
+        </div>
+      </ng-container>
+
+      <ng-container>
+        <div class="filter-title-wrap">
+          <p class="filter-title">Successful Landing</p>
+        </div>
+        <div class="filter-button-wrap">
+          <ng-container>
+            <button class="button-year" [ngClass]="{ 'selected-button': selectedFilters?.landingSuccess === true }"
+              (click)="landingSuccessful(true)">True</button>
+            <button class="button-year button-m-left"
+              [ngClass]="{ 'selected-button': selectedFilters?.landingSuccess === false }"
+              (click)="landingSuccessful(false)">False</button>
+          </ng-container>
+        </div>
+      </ng-container>
+
+    </div>
+  </mat-card-content>
+</mat-card>
