@@ -52,15 +52,3 @@
     margin: 0 !important;
   }
 }
-
-@media screen and (min-width: 700px) and (max-width: 1023px) {
-  .mat-card-wrap {
-
-    .filter-wrap {
-
-      .filter-button-wrap {
-        grid-column-gap: 20rem;
-      }
-    }
-  }
-}
